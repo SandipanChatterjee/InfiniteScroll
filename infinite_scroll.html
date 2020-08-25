@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .image-holder {
+        max-width: 1100px;
+        padding: 0% 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-holder"></div>
+    <script>
+      const imageHolder = document.querySelector(".image-holder");
+      let i = 0;
+
+      const getImageSourceURL = () => {
+        const randomNum = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+        return `http://api.adorable.io/avatars/${randomNum}`;
+      };
+
+      const getELementImage = () => {
+        const img = document.createElement("img");
+        img.src = getImageSourceURL();
+        img.width = "200";
+        img.height = "200";
+        return img;
+      };
+
+      const getELement = () => {
+        const image = getELementImage();
+        imageHolder.append(image);
+      };
+
+      const loadNextBatch = (count = 30) => {
+        while (count > 0) {
+          getELement();
+          count--;
+        }
+      };
+      loadNextBatch();
+
+      window.onscroll = () => {
+        // if (getScrollTop() < getDocumentHeight() - window.innerHeight) return;
+        const scrollable =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollY = window.scrollY;
+        console.log(scrollable, scrollY);
+        if (scrollable === scrollY) loadNextBatch();
+      };
+    </script>
+  </body>
+</html>
