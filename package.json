@@ -1,0 +1,19 @@
+{
+  "name": "infinitescroll",
+  "version": "1.0.0",
+  "description": "pinterest-demo app",
+  "main": "infinite_scroll.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandipanChatterjee/InfiniteScroll.git"
+  },
+  "author": "sandipan chatterjee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandipanChatterjee/InfiniteScroll/issues"
+  },
+  "homepage": "https://github.com/SandipanChatterjee/InfiniteScroll#readme"
+}
