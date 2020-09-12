@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        background-color: #00ffff;
+      }
       .image-holder {
         max-width: 1100px;
         padding: 0% 20%;
@@ -25,8 +28,9 @@
       const getELementImage = () => {
         const img = document.createElement("img");
         img.src = getImageSourceURL();
-        img.width = "200";
-        img.height = "200";
+        img.style.width = "15rem";
+        img.style.height = "15rem";
+        img.style.margin = "1rem";
         return img;
       };
 
